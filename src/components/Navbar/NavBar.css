@@ -1,0 +1,202 @@
+#header {
+  background-color: rgb(1 1 1);
+  height: 38px;
+  z-index: 1;
+  position: fixed;
+
+}
+
+#header .teck-header-text {
+  text-align: center;
+  color: rgb(255 255 255);
+  font-family: poppins;
+  font-size: 16px;
+  padding-top: 10px;
+}
+
+#home-page #teck-nav-menu {
+  background-color: #161717;
+}
+
+#manuItem {
+  background-color: #161717 !important
+}
+
+
+.ant-drawer-body,
+.ant-drawer-header,
+.ant-drawer-title,
+.ant-drawer-header-title,
+.anticon-close {
+  background-color: #161717;
+  color: white !important;
+}
+
+#nav-item {
+  text-align: center;
+  font-size: 20px;
+  font-family: 200px;
+}
+
+#nav-item:after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 0;
+  background: transparent;
+  transition: width 0.7s ease, background-color 0.5s ease;
+}
+
+#nav-item:hover:after {
+  width: 100%;
+  background: white;
+  text-decoration: none;
+}
+
+#nav-item.active {
+  text-decoration: none;
+  /* color: #ffdd40; */
+  /* border: 1px solid #ffdd40; */
+  color: skyblue;
+}
+
+/*** banner-section **/
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+.hero {
+  width: 100%;
+  min-height: 50vh;
+  background-color: var(--color-secondary);
+  background-color: #161717;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 9.7%;
+}
+
+.hero h2 {
+  margin-bottom: 20px;
+  padding: 0;
+  font-size: 48px;
+  font-weight: 700;
+  color: #fff;
+}
+
+@media (max-width: 575px) {
+  .hero {
+    margin-top: 40%;
+  }
+
+  .hero h2 {
+    font-size: 30px;
+  }
+
+ 
+
+}
+
+.hero p {
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+
+.teck-banner-btn {
+  background: rgb(0 0 0 / 0%);
+  color: rgb(255 255 255);
+  border: solid 2px;
+  font-size: 16px;
+  font-family: Roundkey;
+  letter-spacing: 2px;
+  padding: 15px 45px 15px 45px;
+  width: 32%;
+}
+
+#navbarLogo {
+
+  background-color: #161717;
+  color: white;
+
+}
+
+#shoppingCart {
+  height: 14%;
+}
+
+#tShirtCart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  width: 100%;
+  background-color: #00008B;
+  color: #fff;
+  margin: 0 15px;
+  font-size: 4em;
+  left: 30%;
+}
+
+.slick-initialized .slick-slide {
+  margin: 0 0 0 .5%;
+}
+
+.content-with-image {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .5s;
+  margin: 50px 4%;
+}
+
+.content-with-image .desc {
+  position: absolute;
+  padding: 0 5%;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: .5s;
+}
+
+.content-with-image .desc::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: .5;
+}
+
+.content-with-image .desc>* {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+
+.slick-slide img {
+  width: 100%;
+}
+
+.content-with-image:hover .desc {
+  transition: .5s;
+  opacity: 1;
+}
+
+.content-with-image:hover {
+  box-shadow: 10px 10px 20px #202020;
+  transform: scale(1.1);
+  transition: .5s;
+}
+
+.selling-product-text {display: flex; justify-content: center; align-items: center;color: black;}
+.selling-product-text p {font-size: 26px; width: 70%; letter-spacing: unset; line-height: 32px; color: black;}
