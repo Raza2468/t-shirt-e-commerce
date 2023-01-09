@@ -1,10 +1,10 @@
 import React from "react";
-import './SigIn.css'
+import './SignUP.css'
 
-export default function SigIn() {
+export default function SignUP() {
     return (
         <div>
-        SignIn
+            SignUP
         </div>
     )
 }

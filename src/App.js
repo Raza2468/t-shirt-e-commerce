@@ -3,12 +3,12 @@ import "./App.css";
 
 // import 'antd/dist/antd.min.css';
 // import SigIn from "./pages/SignIn/SignIn";
-import { NavBar } from "./components/index";
+import { Home } from "./components/index";
 
 function App() {
   return (
     <div>
-      <NavBar />
+      <Home />
     </div>
   );
 }

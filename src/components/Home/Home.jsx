@@ -1,10 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { Drawer, Button, Divider } from "antd";
-import { MenuOutlined } from "@ant-design/icons";
-import "./NavBar.css"
-import bannerImg from '../Images/banner-img.png'
-import Svg from '../Images/header-logo-1.svg'
+import "./Home.css"
 import TShirt from '../Images/trending-product-1.png'
 import Boxer from '../Images/boxers-img.png'
 import Crown from '../Images/crown-img.png'
@@ -14,37 +9,18 @@ import Siora from '../Images/siora-img.png'
 import Member1 from '../Images/member-1.png'
 import Member2 from '../Images/member-2.jpg'
 import Member3 from '../Images/member-3.jpg'
-
 import HomeHat from '../Images/home-hat.png'
 import HomeHoodies from '../Images/home-hoodies.png'
 import HomeJoggers from '../Images/home-joggers.png'
 import HomeShorts from '../Images/home-shorts.png'
 import HomeTShirt from '../Images/home-tshirt.png'
-import { ShoppingCartOutlined } from '@ant-design/icons';
 import Carousel from "react-elastic-carousel";
+import Header from "../../components/Header/Header";
 
 
 export default function NavBar() {
 
-  const [isVisible, setIsVisible] = useState(false);
 
-  const showDrawer = () => {
-    setIsVisible(true);
-  };
-
-  const closeDrawer = () => {
-    setIsVisible(false);
-  };
-  const styles = {
-    button: {
-
-      background: "transparent",
-      outline: "none",
-      color: "black",
-      border: "none",
-      fontSize: 26
-    },
-  };
 
   const breakPoints = [
     { width: 1, itemsToShow: 1 },
@@ -57,118 +33,10 @@ export default function NavBar() {
 
   return (
     <>
-      <header id="header" class="fixed-top">
-        <div class="container -d-flx aling-item-center">
-          <h3 class="teck-header-text"> Spend $50 for free shipping </h3>
-        </div>
 
-        <nav class="navbar navbar-expand-lg navbar-light" id="navbarLogo">
-          <div class="container-fluid">
-            <nav>
-              <Button shape="circle" style={styles.button} onClick={showDrawer}>
-                <MenuOutlined style={{ color: "white" }} />
-              </Button>
-            </nav>
-            <span class-="text-center"><img src={Svg} /></span>
-
-            <div class="d-flex align-items-center">
-              <a class="text-reset me-3" href="#" >
-                <ShoppingCartOutlined style={{ fontSize: "33px" }} />
-                <span class="badge rounded-pill badge-notification bg-danger">1</span>
-              </a>
-
-              {/* <!-- Avatar --> */}
-
-              <div class="dropdown">
-                <a
-                  class="dropdown-toggle d-flex align-items-center hidden-arrow"
-                  href="#"
-                  id="navbarDropdownMenuAvatar"
-                  role="button"
-                  data-mdb-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <img
-                    src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img (31).webp"
-                    class="rounded-circle"
-                    height="45"
-                    alt="Black and White Portrait of a Man"
-                    loading="lazy"
-                  />
-                </a>
-                <ul
-                  class="dropdown-menu dropdown-menu-end"
-                  aria-labelledby="navbarDropdownMenuAvatar"
-                >
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      Dashboard
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      Order
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      Membership
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      Logout
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </nav>
-
-      </header>
-
-      {/* <!-- Navbar --> */}
-      <Drawer
-        visible={isVisible}
-        placement="left"
-        onClose={closeDrawer}
-        title="My Drawer"
-
-      >
-        {/* <button type="button" class="btn-close text-reset" onClick={closeDrawer} data-bs-dismiss="offcanvas" aria-label="Close"></button> */}
-
-        {/* <Divider /> */}
-        <p id="nav-item">Home</p>
-        <Divider />
-        <p id="nav-item">About Us</p>
-        <Divider />
-        <p id="nav-item">Collection</p>
-        <Divider />
-        <p id="nav-item">Subcription</p>
-        <Divider />
-        <p id="nav-item">Contact Us</p>
-      </Drawer>
 
       <div>
-        <section id="hero" class="hero d-flex align-items-center">
-          <div class="container">
-            <div class="row gy-4 d-flex justify-content-between">
-              <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
-                <h2 data-aos="fade-up">Do Well, Live Well & Dress Really Well</h2>
-                <p data-aos="fade-up" data-aos-delay="100">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a tempus augue, id convallis est. Nulla neque sapien,
-                  mattis at molestie id, auctor faucibus ligula. Pellentesque laoreet luctus erat, at ullamcorper neque feugiat id.</p>
-                <a class="teck-banner-btn" href="collection.html" role="button">SHOP NOW!</a>
-              </div>
-
-              <div class="col-lg-5 order-1 order-lg-2 hero-img" data-aos="zoom-out">
-                <img src={bannerImg} class="img-fluid mb-3 mb-lg-0" alt="" />
-              </div>
-            </div>
-          </div>
-        </section>
-
-
+        <Header />
         <br />
         <br />
         <br />
@@ -374,7 +242,9 @@ export default function NavBar() {
                 <div class="col-lg-6 teck-man-img">
                   <img src={jusdevoyage} class="jusdevoyage-img img-fluid" alt="" />
                   <div class="group-img">
-                    <a href="#"> <img src={GroupImage} class=" img-fluid" alt="" /> </a>
+                    <a href="#">
+                      {/* <img src={GroupImage} class=" img-fluid" alt="" /> */}
+                    </a>
                   </div>
 
                 </div>
@@ -525,7 +395,7 @@ export default function NavBar() {
           <div class="container">
 
             <div class="row d-flex justify-content-around">
- 
+
               <h1>Our Collection</h1>
 
               <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12 ">
